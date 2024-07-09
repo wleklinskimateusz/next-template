@@ -6,7 +6,6 @@ import { eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 
 export async function deleteName(name: string) {
-  console.log("hello");
   await db.delete(users).where(eq(users.name, name));
   revalidatePath("/");
   return;

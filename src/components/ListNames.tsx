@@ -9,11 +9,11 @@ export const ListNames = ({ names }: { names: string[] }) => {
   return (
     <section>
       <h2>List of usernames from DB:</h2>
-      <ul className="my-4">
+      <ul className="my-4 flex flex-col gap-2">
         {names.map((name, index) => (
           <li
             key={index}
-            className="p-4 shadow border rounded flex gap-4  justify-between items-center"
+            className="flex items-center justify-between gap-4 rounded border p-4 shadow"
           >
             <span>{name}</span>
             <form
